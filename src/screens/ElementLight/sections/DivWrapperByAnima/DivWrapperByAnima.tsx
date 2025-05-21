@@ -5,13 +5,13 @@ import { Card, CardContent } from "../../../../components/ui/card";
 const portfolioItems = [
   {
     id: 1,
-    image: "/public/student-img.jpeg",
+    image: "/student-img.jpeg",
     client: "Learning Management System",
     url: "https://lmselite.com/"
   },
   {
     id: 2,
-    image: "/public/digi-card-logo.webp",
+    image: "/digi-card-logo.webp",
     client: "Digital Visiting Card",
     url: "https://souldigicard.com/"
   }
