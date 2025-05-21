@@ -192,7 +192,7 @@ const faqs = [
   },
   {
     question: 'Are there any free courses available?',
-    intense: 'Some courses may be available for free, while others require payment. Check our catalog for specific details.',
+    answer: 'Some courses may be available for free, while others require payment. Check our catalog for specific details.',
   },
 ];
 
