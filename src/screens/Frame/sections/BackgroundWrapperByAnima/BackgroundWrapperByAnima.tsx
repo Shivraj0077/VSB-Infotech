@@ -103,7 +103,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
     {
       title: "Innovators, Not Just Developers:",
       description:
-        "Our team of experts specializes in education technology and digital networking solutions, solving challenges others can’t.",
+        "Our team of experts specializes in education technology and digital networking solutions, solving challenges others can't.",
     },
     {
       title: "Specialized Expertise:",
@@ -208,7 +208,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
     {
       rating: "5.0",
       text: "Ysb has been a great partner in helping us reach our goals.",
-      position: "pranav",
+      position: "Pranav",
       company: "REAL ESTATE TECHNOLOGY COMPANY",
       verifiedDate: "Verified by Clutch, Nov 8, 2024",
     },
@@ -216,13 +216,13 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
       rating: "5.0",
       text: "I appreciate the flexibility with which they roll teammates on and off the project.",
       position: "Chief Technology Officer",
-      company: "jhon ",
+      company: "JOHN",
       verifiedDate: "Verified by Clutch, Jan 12, 2023",
     },
     {
       rating: "5.0",
       text: "They're very inquisitive engineers, plugged in designers, and want to know your business in a genuine way.",
-      position: "vinay Sharma",
+      position: "Vinay Sharma",
       company: "ALPHA TECHNOLOGY, MAN GROUP",
       verifiedDate: "Verified by Clutch, Jun 30, 2020",
     },
@@ -236,7 +236,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
           {/* Case studies section */}
      <section className="bg-white p-4 sm:p-8 mt-8 sm:mt-16 rounded-[20px]">
   <h2 className="text-3xl sm:text-5xl text-[#232323] text-center [font-family:'Figtree',Helvetica] leading-tight sm:leading-[58px] mb-6 sm:mb-12">
-    Some of the solutions we’ve delivered:
+    Some of the solutions we've delivered:
     <br className="hidden sm:block" />
     
   </h2>
@@ -410,7 +410,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
               </div>
 
               <p className="text-[#232323] text-base [font-family:'Inter',Helvetica] leading-[22px]">
-               Whether you’re managing large-scale training programs, integrating AI into education, or transitioning to digital networking, outdated tools and complex requirements can lead to inefficiencies.
+               Whether you're managing large-scale training programs, integrating AI into education, or transitioning to digital networking, outdated tools and complex requirements can lead to inefficiencies.
                 <br />
                At our compnay, we create scalable LMS platforms and Digital Visiting Cards that integrate seamlessly into your workflows, ensuring flexibility and growth."
               </p>
@@ -488,11 +488,11 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
                     <span className="text-[#232323] text-base font-medium [font-family:'Inter',Helvetica] leading-[22px] mr-4">
                       {review.rating}
                     </span>
-                    <div className="flex">
+                    <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
                         <img
                           key={i}
-                          className="w-3.5 h-3 mx-0.5"
+                          className="w-4 h-4"
                           alt="Star"
                           src="/component-1.svg"
                         />
@@ -502,7 +502,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
                       <img
                         className="w-10 h-10"
                         alt="Quote"
-                        src={`/component-1-${index === 0 ? "76" : index === 1 ? "75" : index === 2 ? "55" : "12"}.svg`}
+                        src="/component-1-76.svg"
                       />
                     </div>
                   </div>
@@ -525,7 +525,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
                         <img
                           className="w-[70px] h-5 mb-2"
                           alt="Clutch logo"
-                          src={`/clutch-logo${index > 0 ? `-${index}` : ""}.png`}
+                          src="/clutch-logo.png"
                         />
                         <p className="text-[#757575] text-xs [font-family:'Inter',Helvetica] leading-[16.8px]">
                           {review.verifiedDate}
