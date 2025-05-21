@@ -84,18 +84,12 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen max-h-screen bg-black overflow-hidden">
-      <Navbar/>
-      {/* Header/Navigation */}
-      <header>
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        </div>
-      </header>
-
+    <div className="flex flex-col min-h-screen bg-black overflow-x-hidden">
+      <Navbar />
       {/* Main Content */}
-      <main className="flex-grow grid md:grid-cols-2 overflow-hidden">
+      <main className="mt-8 flex-grow grid grid-cols-1 md:grid-cols-2 bg-black pt-16 md:pt-0">
         {/* Left Side: Background Image */}
-        <div className="relative hidden md:block">
+        <div className="relative hidden md:block h-full">
           <div className="absolute inset-0">
             <img
               src="/red1.jpg"
@@ -107,18 +101,18 @@ const ContactUs: React.FC = () => {
         </div>
 
         {/* Right Side: Contact Form */}
-        <div className="flex items-center justify-center p-4 md:p-12">
+        <div className="flex items-center justify-center p-4 sm:p-6 md:p-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full max-w-md"
+            className="w-full max-w-[95%] sm:max-w-md"
           >
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-3xl md:text-4xl font-bold text-white mb-2"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2"
             >
               Contact Us
             </motion.h1>
@@ -127,7 +121,7 @@ const ContactUs: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-gray-400 mb-8"
+              className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-8"
             >
               Send us a message and we will get back to you as soon as possible.
             </motion.p>
@@ -138,7 +132,7 @@ const ContactUs: React.FC = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="mb-6 p-4 rounded-lg bg-green-900 text-green-200"
+                  className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-green-900 text-green-200 text-xs sm:text-sm"
                 >
                   Your message has been sent successfully!
                 </motion.div>
@@ -148,20 +142,20 @@ const ContactUs: React.FC = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="mb-6 p-4 rounded-lg bg-red-900 text-red-200"
+                  className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-red-900 text-red-200 text-xs sm:text-sm"
                 >
                   {submitError}
                 </motion.div>
               )}
             </AnimatePresence>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <label className="block text-sm font-medium text-gray-300">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300">
                   Name
                 </label>
                 <input
@@ -170,7 +164,7 @@ const ContactUs: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   disabled={loading}
-                  className="mt-1 w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition duration-300 ease-in-out"
+                  className="mt-1 w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition duration-300 ease-in-out"
                   placeholder="Your Name"
                 />
                 <AnimatePresence>
@@ -179,7 +173,7 @@ const ContactUs: React.FC = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="mt-1 text-sm text-red-400"
+                      className="mt-1 text-xs sm:text-sm text-red-400"
                     >
                       {errors.name}
                     </motion.p>
@@ -192,7 +186,7 @@ const ContactUs: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <label className="block text-sm font-medium text-gray-300">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300">
                   Email
                 </label>
                 <input
@@ -201,7 +195,7 @@ const ContactUs: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   disabled={loading}
-                  className="mt-1 w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition duration-300 ease-in-out"
+                  className="mt-1 w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition duration-300 ease-in-out"
                   placeholder="Your Email"
                 />
                 <AnimatePresence>
@@ -210,7 +204,7 @@ const ContactUs: React.FC = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="mt-1 text-sm text-red-400"
+                      className="mt-1 text-xs sm:text-sm text-red-400"
                     >
                       {errors.email}
                     </motion.p>
@@ -223,7 +217,7 @@ const ContactUs: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                <label className="block text-sm font-medium text-gray-300">
+                <label className="block text-xs sm:text-sm font-medium text-gray-300">
                   Message
                 </label>
                 <textarea
@@ -231,8 +225,8 @@ const ContactUs: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   disabled={loading}
-                  rows={5}
-                  className="mt-1 w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition duration-300 ease-in-out resize-none"
+                  rows={4}
+                  className="mt-1 w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-900 border border-gray-800 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition duration-300 ease-in-out resize-none"
                   placeholder="Your Message"
                 />
                 <AnimatePresence>
@@ -241,7 +235,7 @@ const ContactUs: React.FC = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="mt-1 text-sm text-red-400"
+                      className="mt-1 text-xs sm:text-sm text-red-400"
                     >
                       {errors.message}
                     </motion.p>
@@ -257,17 +251,17 @@ const ContactUs: React.FC = () => {
                 transition={{ delay: 0.7 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full py-3 px-6 rounded-lg text-white font-medium ${
+                className={`w-full py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-white font-medium ${
                   loading ? 'bg-blue-800 cursor-not-allowed' : 'bg-blue-700 hover:bg-blue-600'
-                } transition duration-300 ease-in-out shadow-lg`}
+                } transition duration-300 ease-in-out shadow-lg text-sm sm:text-base`}
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </motion.button>
             </div>
            
-            <div className="mt-8 flex items-center">
+            <div className="mt-6 sm:mt-8 flex items-center">
               <div className="flex-1 border-t border-gray-800"></div>
-              <span className="px-4 text-sm text-gray-500"></span>
+              <span className="px-4 text-xs sm:text-sm text-gray-500"></span>
               <div className="flex-1 border-t border-gray-800"></div>
             </div>
             
@@ -275,7 +269,7 @@ const ContactUs: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9 }}
-              className="mt-8 text-center text-xs text-gray-500"
+              className="mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-500"
             >
               By continuing, you agree to our Terms of Service and Privacy Policy
             </motion.p>

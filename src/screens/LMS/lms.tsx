@@ -586,7 +586,7 @@ const Lms: React.FC = () => {
                   <div
                     className="absolute inset-0 rounded-2xl opacity-0 sm:hover:opacity-100 transition-opacity duration-300"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(だけで、 87, 238, 0.1) 0%, rgba(127, 61, 226, 0.1) 100%)',
+                      background: 'linear-gradient(135deg, rgba(45, 87, 238, 0.1) 0%, rgba(127, 61, 226, 0.1) 100%)',
                     }}
                   />
                 </div>
@@ -776,6 +776,11 @@ const Lms: React.FC = () => {
                 <div
                   key={index}
                   className="relative p-4 sm:p-6 rounded-2xl transition-all duration-300 sm:hover:scale-[1.02]"
+                  style={{
+                    backgroundColor: 'rgba(28, 28, 28, 0.8)',
+                    border: '1px solid rgba(255, 239, 212, 0.1)',
+                    backdropFilter: 'blur(10px)',
+                  }}
                 >
                   <div className="flex flex-col space-y-2 sm:space-y-3">
                     <button
@@ -825,14 +830,18 @@ const Lms: React.FC = () => {
                         />
                       </svg>
                     </button>
-                    {openIndex === index && (
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ${
+                        openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
                       <p
-                        className="text-sm sm:text-base leading-relaxed ml-11 sm:ml-14"
+                        className="text-sm sm:text-base leading-relaxed ml-11 sm:ml-14 mt-2"
                         style={{ color: 'rgb(200, 201, 203)' }}
                       >
                         {faq.answer}
                       </p>
-                    )}
+                    </div>
                   </div>
                 </div>
               ))}
