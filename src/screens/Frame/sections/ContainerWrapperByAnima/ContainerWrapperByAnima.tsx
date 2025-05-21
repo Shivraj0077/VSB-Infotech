@@ -37,37 +37,37 @@ export const ContainerWrapperByAnima = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex items-start justify-center py-20 px-0 relative w-full bg-[#f4f4f4] border-b border-neutral-200">
-      <div className="w-full max-w-[1440px] px-4">
-        <div className="flex flex-col items-center mb-16">
-          <h2 className="font-['Figtree',Helvetica] font-normal text-[#232323] text-5xl text-center leading-[58px] mb-5">
+    <section className="flex items-start justify-center py-12 sm:py-16 md:py-20 px-4 relative w-full bg-[#f4f4f4] border-b border-neutral-200">
+      <div className="w-full max-w-[1440px]">
+        <div className="flex flex-col items-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="font-['Figtree',Helvetica] font-normal text-[#232323] text-3xl sm:text-4xl md:text-5xl text-center leading-tight sm:leading-[58px] mb-4 sm:mb-5">
             Meet your web app development experts
           </h2>
-          <p className="font-['Inter',Helvetica] font-normal text-[#6d6d6d] text-xl text-center leading-7 max-w-[644px]">
+          <p className="font-['Inter',Helvetica] font-normal text-[#6d6d6d] text-base sm:text-lg md:text-xl text-center leading-6 sm:leading-7 max-w-[644px]">
             Get ready to meet the talented individuals who make it all happen.
-            <br />
+            <br className="hidden sm:block" />
             Our team isn't just a group of skilled developers – they're the
             people
-            <br />
+            <br className="hidden sm:block" />
             who turn your biggest challenges into great solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {teamMembers.map((member) => (
             <Card key={member.id} className="border-none shadow-none">
               <CardContent className="p-0">
                 <div
-                  className="w-full h-[287px] mb-6 bg-cover bg-center"
+                  className="w-full h-[200px] sm:h-[250px] md:h-[287px] mb-4 sm:mb-6 bg-cover bg-center"
                   style={{ backgroundImage: `url(${member.image})` }}
                 />
-                <h3 className="font-['Inter',Helvetica] font-medium text-[#232323] text-xl leading-7 mb-1">
+                <h3 className="font-['Inter',Helvetica] font-medium text-[#232323] text-lg sm:text-xl leading-6 sm:leading-7 mb-1">
                   {member.name}
                 </h3>
-                <p className="font-['Inter',Helvetica] font-medium text-[#757575] text-[10px] tracking-[1.00px] leading-[14px] mb-4">
+                <p className="font-['Inter',Helvetica] font-medium text-[#757575] text-[8px] sm:text-[10px] tracking-[1.00px] leading-3 sm:leading-[14px] mb-3 sm:mb-4">
                   {member.title}
                 </p>
-                <p className="font-['Inter',Helvetica] font-normal text-[#6d6d6d] text-base leading-[22px]">
+                <p className="font-['Inter',Helvetica] font-normal text-[#6d6d6d] text-sm sm:text-base leading-5 sm:leading-[22px]">
                   {member.bio}
                 </p>
               </CardContent>

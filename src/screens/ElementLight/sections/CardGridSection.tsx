@@ -47,29 +47,20 @@ const cardItems = [
 
 const CardGrid = ({ items }: { items: typeof cardItems }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[900px] mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
       {items.map(({ id, title, description }, index) => {
         const isLast = index === items.length - 1;
         return (
           <div
             key={id}
-            className="bg-[#1f1f1f] rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 cursor-default"
-            style={
-              isLast
-                ? {
-                    gridColumn: "span 3",
-                    justifySelf: "center",
-                    maxWidth: "400px",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }
-                : undefined
-            }
+            className={`bg-[#1f1f1f] rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 cursor-default ${
+              isLast ? "sm:col-span-2 lg:col-span-3 max-w-[600px] mx-auto" : ""
+            }`}
           >
-            <h3 className="text-[#ffefd4] text-2xl font-semibold mb-3 font-['Urbanist']">
+            <h3 className="text-[#ffefd4] text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 font-['Urbanist']">
               {title}
             </h3>
-            <p className="text-[#bcbdbf] font-light italic font-['Merriweather'] leading-relaxed">
+            <p className="text-[#bcbdbf] text-sm sm:text-base font-light italic font-['Merriweather'] leading-relaxed">
               {description}
             </p>
           </div>
@@ -79,16 +70,14 @@ const CardGrid = ({ items }: { items: typeof cardItems }) => {
   );
 };
 
-
-
 export const CardGridSection = () => {
   return (
-    <section className="py-16 px-4 bg-[#121212]">
-      <div className="max-w-[900px] mx-auto text-center mb-12">
-        <h2 className="font-['Urbanist'] text-[#ffefd4] text-5xl md:text-[78px] leading-tight mb-4">
+    <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-[#121212]">
+      <div className="max-w-[1200px] mx-auto text-center mb-8 sm:mb-12">
+        <h2 className="font-['Urbanist'] text-[#ffefd4] text-3xl sm:text-5xl lg:text-[78px] leading-tight mb-3 sm:mb-4">
           Ideal For
         </h2>
-        <p className="font-['Merriweather'] text-[#bcbdbf] text-xl font-light italic">
+        <p className="font-['Merriweather'] text-[#bcbdbf] text-base sm:text-lg lg:text-xl font-light italic max-w-2xl mx-auto">
           Our solutions are perfect for professionals across various industries
         </p>
       </div>

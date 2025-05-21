@@ -15,16 +15,9 @@ const Button = ({ className, children, onClick }: ButtonProps) => {
   );
 };
 
-
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
-  // Menu items data
-  const menuItems = [
-    
-  {}
-  ];
 
   // Handle window resize to determine mobile view
   useEffect(() => {
@@ -54,31 +47,27 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="w-[100px] md:w-[120px]">
-             {/* <img
-                className="w-full h-6"
-                alt=""
-                src="/"
-              />*/}
+              {/* Logo image placeholder */}
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center">
-          
-            
-            {/* Careers Link */}
-            <div className="h-[72px] flex items-center px-2.5 mr-4">
-              <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica] tracking-[0] whitespace-nowrap cursor-pointer"  onClick={() => window.location.href = '/about'}>
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="h-[72px] flex items-center px-2.5">
+              <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica] tracking-[0] whitespace-nowrap cursor-pointer hover:text-[#00b2a9] transition-colors duration-300" onClick={() => window.location.href = '/about'}>
                 AboutUs
               </div>
             </div>
-              <div className="h-[72px] flex items-center px-2.5 mr-4">
-              <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica] tracking-[0] whitespace-nowrap cursor-pointer"  onClick={() => window.location.href = '/products'}>
-                products
+            <div className="h-[72px] flex items-center px-2.5">
+              <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica] tracking-[0] whitespace-nowrap cursor-pointer hover:text-[#00b2a9] transition-colors duration-300" onClick={() => window.location.href = '/products'}>
+                Products
               </div>
             </div>
             {/* Let's Talk Button */}
-            <Button className="w-[150px] h-[42px] rounded-[20px] bg-[#00b2a9] border border-solid text-white hover:bg-[#00a29a] flex items-center justify-center" onClick={() => window.location.href = '/contact'}>
+            <Button 
+              className="w-[150px] h-[42px] rounded-[20px] bg-[#00b2a9] border border-solid text-white hover:bg-[#00a29a] transition-colors duration-300 flex items-center justify-center" 
+              onClick={() => window.location.href = '/contact'}
+            >
               <span className="font-normal text-sm leading-6 font-['Inter',Helvetica]">
                 LET&#39;S TALK
               </span>
@@ -90,7 +79,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button 
               onClick={toggleMenu}
-              className="text-white p-2"
+              className="text-white p-2 hover:text-[#00b2a9] transition-colors duration-300"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -103,35 +92,36 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Navigation Dropdown */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-[#1e1e1e] py-4 border-t border-gray-700">
-            <nav className="flex flex-col">
-              
-              
-              {/* Careers Link in Mobile Menu */}
-              <div className="py-3 px-4 cursor-pointer hover:bg-[#2a2a2a]">
-                <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica]"  onClick={() => window.location.href = '/about'}>
-                  AboutUs
-                </div>
+        <div 
+          className={`lg:hidden bg-[#1e1e1e] transition-all duration-300 ease-in-out overflow-hidden ${
+            isMenuOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <nav className="flex flex-col py-4 border-t border-gray-700">
+            <div className="py-3 px-4 cursor-pointer hover:bg-[#2a2a2a] transition-colors duration-300">
+              <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica] hover:text-[#00b2a9]" onClick={() => window.location.href = '/about'}>
+                AboutUs
               </div>
-                <div className="py-3 px-4 cursor-pointer hover:bg-[#2a2a2a]">
-                <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica]"  onClick={() => window.location.href = '/products'}>
-                  Our Products
-                </div>
+            </div>
+            <div className="py-3 px-4 cursor-pointer hover:bg-[#2a2a2a] transition-colors duration-300">
+              <div className="font-normal text-white text-sm leading-[16.8px] font-['Inter',Helvetica] hover:text-[#00b2a9]" onClick={() => window.location.href = '/products'}>
+                Our Products
               </div>
-              
-              {/* Let's Talk Button in Mobile Menu */}
-              <div className="mx-4 mt-4">
-                <Button className="w-full h-[42px] rounded-[20px] bg-[#00b2a9] border border-solid text-white hover:bg-[#00a29a] flex items-center justify-center" onClick={() => window.location.href = '/contact'}>
-                  <span className="font-normal text-sm leading-6 font-['Inter',Helvetica]">
+            </div>
+            {/* Let's Talk Button in Mobile Menu */}
+            <div className="mx-4 mt-4">
+              <Button 
+                className="w-full h-[42px] rounded-[20px] bg-[#00b2a9] border border-solid text-white hover:bg-[#00a29a] transition-colors duration-300 flex items-center justify-center" 
+                onClick={() => window.location.href = '/contact'}
+              >
+                <span className="font-normal text-sm leading-6 font-['Inter',Helvetica]">
                   LET&#39;S TALK
-                  </span>
-                  <ChevronRightIcon className="w-[13px] h-3 ml-2" />
-                </Button>
-              </div>
-            </nav>
-          </div>
-        )}
+                </span>
+                <ChevronRightIcon className="w-[13px] h-3 ml-2" />
+              </Button>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   );

@@ -1,68 +1,24 @@
 import React from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "../../../../components/ui/accordion";
-import { Badge } from "../../../../components/ui/badge";
+import { Button } from "../../../../components/ui/button";
 
 export const DivByAnima = (): JSX.Element => {
-  // FAQ categories with their questions
-  const faqCategories = [
-    {
-      id: "unique-services",
-      label: "Unique services",
-      questions: [
-        "What makes your web app development services unique compared to regular web development?",
-        "Are your web app development services suitable for building large-scale enterprise web applications?",
-        "What are the benefits of outsourcing complex web app development to STX Next?",
-      ],
-    },
-    {
-      id: "technology-tools",
-      label: "Technology & tools",
-      questions: [
-        "What technologies do you recommend for building scalable web applications?",
-        "Can your team handle niche technologies specific to our web application's needs?",
-        "Do your services include web application modernization for legacy systems?",
-        "How do you handle web application integration with existing systems or third-party services?",
-      ],
-    },
-    {
-      id: "quality-security",
-      label: "Quality & security",
-      questions: [
-        "How do you ensure quality and security in the web app development lifecycle?",
-        "How do you ensure senior-level engineering expertise is applied to our web app development?",
-        "How do you guarantee code quality and manage technical debt during web app development?",
-        "During web application modernization, how do you handle existing technical debt?",
-      ],
-    },
-    {
-      id: "process-methodology",
-      label: "Process & methodology",
-      questions: [
-        "How soon can we start our custom web app development project?",
-        "What is your typical process for agile web app development?",
-        "What happens if unexpected technical challenges arise during the web app development?",
-        "How is our Intellectual Property protected during web application development?",
-      ],
-    },
-    {
-      id: "communication-management",
-      label: "Communication & management",
-      questions: [
-        "How is communication managed for outsourced web app development projects, especially across time zones?",
-        "How proactive is your team in suggesting improvements during web app development?",
-        "How are your web app development teams structured?",
-      ],
-    },
-  ];
-
   return (
-    <section className="w-full bg-[#f4f4f4] py-16 px-4">
-      
+    <section className="flex items-start justify-center py-12 sm:py-16 md:py-20 px-4 relative w-full bg-white">
+      <div className="w-full max-w-[1440px]">
+        <div className="flex flex-col items-center">
+          <h2 className="font-['Figtree',Helvetica] font-normal text-[#232323] text-3xl sm:text-4xl md:text-5xl text-center leading-tight sm:leading-[58px] mb-4 sm:mb-5">
+            Ready to start your project?
+          </h2>
+          <p className="font-['Inter',Helvetica] font-normal text-[#6d6d6d] text-base sm:text-lg md:text-xl text-center leading-6 sm:leading-7 max-w-[644px] mb-8 sm:mb-12">
+            Let's discuss how we can help you achieve your goals.
+            <br className="hidden sm:block" />
+            Our team is ready to turn your vision into reality.
+          </p>
+          <Button className="bg-[#232323] text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-none hover:bg-[#232323]/90">
+            Get in touch
+          </Button>
+        </div>
+      </div>
     </section>
   );
 };

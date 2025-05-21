@@ -26,7 +26,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
         <>
           Our solutions are perfect for educational institutions, corporate enterprises, startups, NGOs, healthcare providers, and freelancers.
           <br />
-          Whether you're running training programs, managing online classrooms, or onboarding employees, we’ve got the right tools for you.
+          Whether you're running training programs, managing online classrooms, or onboarding employees, we've got the right tools for you.
         </>
       ),
     },
@@ -66,34 +66,34 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
         <>
           You can call us at <strong>+91 9004510103</strong> or email <strong>tgri.india@gmail.com</strong> for inquiries, demos, or support.
           <br />
-          We’ll help you understand how our products fit your specific needs.
+          We'll help you understand how our products fit your specific needs.
         </>
       ),
     },
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center gap-14 py-36 px-8 bg-gohausdesignblack relative">
+    <section className="flex flex-col items-center justify-center gap-8 sm:gap-12 lg:gap-14 py-16 sm:py-24 lg:py-36 px-4 sm:px-6 lg:px-8 bg-gohausdesignblack relative">
       {/* Background gradient and image */}
-      <div className="absolute w-full h-[300px] top-0 left-0 [background:linear-gradient(180deg,rgba(10,10,10,1)_0%,rgba(0,0,0,1)_100%)] border-t border-[#9e9e9e29]">
-        <div className="relative h-[665px] top-[-365px]">
-          <div className="w-full max-w-[960px] h-[665px] mx-auto bg-[url(/2ztm81mdcxemibswfvdh4x7jigg-png-22.png)] bg-cover bg-center" />
+      <div className="absolute w-full h-[200px] sm:h-[250px] lg:h-[300px] top-0 left-0 [background:linear-gradient(180deg,rgba(10,10,10,1)_0%,rgba(0,0,0,1)_100%)] border-t border-[#9e9e9e29]">
+        <div className="relative h-[400px] sm:h-[500px] lg:h-[665px] top-[-200px] sm:top-[-250px] lg:top-[-365px]">
+          <div className="w-full max-w-[960px] h-full mx-auto bg-[url(/2ztm81mdcxemibswfvdh4x7jigg-png-22.png)] bg-cover bg-center" />
         </div>
       </div>
 
       {/* Heading section */}
       <div className="flex flex-col max-w-[900px] items-center justify-center gap-4 relative z-[2]">
         <div className="flex flex-col items-center pb-[0.83px]">
-          <h2 className="[font-family:'Urbanist',Helvetica] font-normal text-gohausdesignpapaya-whip text-[78px] text-center tracking-[-2.00px] leading-[81.9px]">
+          <h2 className="[font-family:'Urbanist',Helvetica] font-normal text-gohausdesignpapaya-whip text-3xl sm:text-5xl lg:text-[78px] text-center tracking-[-2.00px] leading-tight sm:leading-[81.9px]">
             Curious about something?
-            <br />
+            <br className="hidden sm:block" />
             We've got answers
           </h2>
         </div>
       </div>
 
       {/* FAQ Accordion */}
-      <div className="max-w-[1240px] w-full z-[1]">
+      <div className="w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 z-[1]">
         <Accordion
           type="single"
           collapsible
@@ -105,11 +105,11 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
               value={`item-${index}`}
               className="border-b border-[#0000001a]"
             >
-              <AccordionTrigger className="py-5 font-gohaus-design-semantic-heading-4 font-[number:var(--gohaus-design-semantic-heading-4-font-weight)] [font-style:var(--gohaus-design-semantic-heading-4-font-style)] text-gohausdesignpapaya-whip text-[length:var(--gohaus-design-semantic-heading-4-font-size)] tracking-[var(--gohaus-design-semantic-heading-4-letter-spacing)] leading-[var(--gohaus-design-semantic-heading-4-line-height)]">
+              <AccordionTrigger className="py-4 sm:py-5 font-gohaus-design-semantic-heading-4 text-base sm:text-lg lg:text-xl text-gohausdesignpapaya-whip">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="pb-8">
-                <div className="[font-family:'Lexend',Helvetica] font-light text-white text-lg tracking-[-0.30px] leading-[32.4px]">
+              <AccordionContent className="pb-6 sm:pb-8">
+                <div className="[font-family:'Lexend',Helvetica] font-light text-white text-sm sm:text-base lg:text-lg tracking-[-0.30px] leading-relaxed">
                   {item.answer}
                 </div>
               </AccordionContent>

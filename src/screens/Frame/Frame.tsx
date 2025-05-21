@@ -26,14 +26,9 @@ export const Frame = (): JSX.Element => {
         <div className="flex flex-col items-start relative self-stretch w-full">
           <BackgroundByAnima />
           <BackgroundWrapperByAnima />
-        
-          
           <DivByAnima />
           <Footer/>
-          
         </div>
-
-        
         {/* Navigation Bar */}
        <Navbar/>
       </div>

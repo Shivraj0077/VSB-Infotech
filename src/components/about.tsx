@@ -49,28 +49,26 @@ const AboutUs = () => {
       <Navbar/>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute inset-0 z-0 opacity-20 mt-16">
           <img
             src="4.jpeg"
             alt="Background texture"
-            className="object-cover w-full "
+            className="object-cover w-full h-full"
           />
         </div>
         <div className="container px-4 mx-auto z-10">
           <AnimatedSection className="text-center max-w-4xl mx-auto">
             <motion.h1
               variants={fadeIn}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 px-4"
             >
               About Our Vision
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-gray-300 mb-8">
+            <motion.p variants={fadeIn} className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 px-4">
               We create digital experiences that transform businesses and inspire people
             </motion.p>
             <motion.div variants={fadeIn}>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg">
-                Our Work 
-              </Button>
+              
             </motion.div>
           </AnimatedSection>
         </div>
@@ -86,12 +84,12 @@ const AboutUs = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 sm:py-20 md:py-32">
         <div className="container px-4 mx-auto">
-          <AnimatedSection className="grid md:grid-cols-2 gap-12 items-center">
+          <AnimatedSection className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <motion.div variants={fadeIn} className="order-2 md:order-1">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
-              <p className="text-gray-300 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Our Story</h2>
+              <p className="text-gray-300 mb-6 text-sm sm:text-base">
               The Graphology Research Institute (TGRI), based in Mumbai, is a specialized organization dedicated to the study and application of graphology—the science of handwriting analysis. TGRI offers a wide range of training and certification programs aimed at helping individuals understand personality traits, emotional patterns, and behavioral tendencies through handwriting. The institute provides personal consultations, educational workshops, and corporate training sessions that apply graphology in areas such as recruitment, relationship counseling, career guidance, and self-development. With a strong focus on psychological insights and practical applications, TGRI empowers individuals and professionals alike to explore human behavior in a unique and impactful way.
               </p>
              
@@ -125,17 +123,17 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-12 sm:py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
         <div className="container px-4 mx-auto">
           <AnimatedSection>
-            <motion.div variants={fadeIn} className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Core Values</h2>
-              <p className="text-gray-300">
+            <motion.div variants={fadeIn} className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Our Core Values</h2>
+              <p className="text-gray-300 text-sm sm:text-base">
                 These principles guide everything we do, from how we work together to how we serve our clients.
               </p>
             </motion.div>
 
-            <motion.div variants={staggerContainer} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div variants={staggerContainer} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
               {[
                 {
                   icon: <Users className="h-10 w-10" />,
@@ -161,13 +159,13 @@ const AboutUs = () => {
                 <motion.div
                   key={index}
                   variants={fadeIn}
-                  className="bg-gray-900 bg-opacity-50 p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all"
+                  className="bg-gray-900 bg-opacity-50 p-6 sm:p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all"
                 >
-                  <div className="bg-gradient-to-br from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <div className="bg-gradient-to-br from-purple-600 to-blue-600 w-12 sm:w-16 h-12 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                  <p className="text-gray-400">{value.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{value.title}</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">{value.description}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -179,12 +177,12 @@ const AboutUs = () => {
      
 
       {/* Timeline Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-12 sm:py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black">
         <div className="container px-4 mx-auto">
           <AnimatedSection>
-            <motion.div variants={fadeIn} className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Journey</h2>
-              <p className="text-gray-300">
+            <motion.div variants={fadeIn} className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Our Journey</h2>
+              <p className="text-gray-300 text-sm sm:text-base">
                 From humble beginnings to industry leadership, our path has been defined by continuous growth and
                 innovation.
               </p>
@@ -225,10 +223,10 @@ const AboutUs = () => {
                     }`}
                   >
                     <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
-                      <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 inline-block">
-                        <span className="text-purple-400 font-bold">{event.year}</span>
-                        <h3 className="text-xl font-bold mt-2 mb-3">{event.title}</h3>
-                        <p className="text-gray-400">{event.description}</p>
+                      <div className="bg-gray-900 p-4 sm:p-6 rounded-xl border border-gray-800 inline-block">
+                        <span className="text-purple-400 font-bold text-sm sm:text-base">{event.year}</span>
+                        <h3 className="text-lg sm:text-xl font-bold mt-2 mb-2 sm:mb-3">{event.title}</h3>
+                        <p className="text-gray-400 text-sm sm:text-base">{event.description}</p>
                       </div>
                     </div>
                     <div className="hidden md:block w-1/2"></div>
@@ -244,20 +242,20 @@ const AboutUs = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 sm:py-20 md:py-32">
         <div className="container px-4 mx-auto">
           <AnimatedSection className="max-w-4xl mx-auto text-center">
             <motion.div
               variants={fadeIn}
-              className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 p-12 md:p-16 rounded-3xl border border-gray-800"
+              className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 p-6 sm:p-12 md:p-16 rounded-3xl border border-gray-800"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to work together?</h2>
-              <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Ready to work together?</h2>
+              <p className="text-gray-300 text-base sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto">
                 Let's create something extraordinary together. Reach out to discuss how we can help bring your vision to
                 life.
               </p>
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg" onClick={() => window.location.href = '/contact'}>
-                Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg" onClick={() => window.location.href = '/contact'}>
+                Get in Touch <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
             </motion.div>
           </AnimatedSection>
