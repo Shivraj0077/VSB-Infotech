@@ -74,7 +74,7 @@ export const DivWrapperByAnima = (): JSX.Element => {
                   View Project
                 </div>
                 <img
-                  src="/public/arrow-right-up-svgrepo-com.svg"
+                  src="/arrow-right-up-svgrepo-com.svg"
                   alt="Arrow"
                   className="w-5 h-5"
                 />
