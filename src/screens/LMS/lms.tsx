@@ -328,7 +328,7 @@ const Lms: React.FC = () => {
             >
               Graphology Complete Course
             </h3>
-            <SuccessCard imageSrc="/public/graphology-course.jpg" altText="Graphology Complete Course Interface" />
+            <SuccessCard imageSrc="/graphology-course.jpg" altText="Graphology Complete Course Interface" />
             
             {/* Enhanced Popup - Modified positioning */}
             <div
@@ -433,7 +433,7 @@ const Lms: React.FC = () => {
             >
               Magic Of Branding Course
             </h3>
-            <SuccessCard imageSrc="/public/branding-course.jpg" altText="Magic Of Branding Course Interface" />
+            <SuccessCard imageSrc="/branding-course.jpg" altText="Magic Of Branding Course Interface" />
             
             {/* Enhanced Popup - Modified positioning */}
             <div
