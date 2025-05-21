@@ -262,7 +262,7 @@ const Digi_card: React.FC = () => {
             >
               Front Side
             </p>
-            <SuccessCard imageSrc="/public/card-img.png" altText="Front Side of Digital Card" />
+            <SuccessCard imageSrc="/card-img.png" altText="Front Side of Digital Card" />
           </div>
           <div>
             <p
@@ -278,7 +278,7 @@ const Digi_card: React.FC = () => {
             >
               Back Side
             </p>
-            <SuccessCard imageSrc="/public/new-card-img.jpg" altText="Back Side of Digital Card" />
+            <SuccessCard imageSrc="/new-card-img.jpg" altText="Back Side of Digital Card" />
           </div>
         </div>
       </div>
