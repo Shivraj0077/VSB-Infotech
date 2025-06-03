@@ -182,7 +182,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
       description:
         "For a growing startup, we created a Digital Visiting Card solution with contactless sharing via QR codes and NFC. This helped their sales team increase lead generation by 25%.",
       category: "digital identity",
-      backgroundImage: "./cardd.jpg",
+      backgroundImage: "/card-img.png",
     },
     
   ];
@@ -291,68 +291,7 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
           <Industries/>
         </div>
         
-        <section className="bg-white p-4 sm:p-8 mt-12 sm:mt-20 rounded-[20px]">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#232323] text-center [font-family:'Figtree',Helvetica] leading-tight sm:leading-[58px] mb-4">
-            Why VSB ?
-          </h2>
-
-          <p className="text-base sm:text-lg md:text-xl text-[#6d6d6d] text-center [font-family:'Inter',Helvetica] leading-6 sm:leading-7 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            When learning and networking demand innovation,VSB stands out as a trusted partner
-            <br className="hidden sm:block" />
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            {whyStxNextCards.slice(0, 3).map((card, index) => (
-              <Card
-                key={index}
-                className={
-                  index === 1
-                    ? "bg-[url(/team.jpg)] bg-cover h-[300px] sm:h-[422px]"
-                    : "bg-[#f4f4f4] h-[300px] sm:h-[422px]"
-                }
-              >
-                <CardContent className="flex flex-col justify-between h-full p-4 sm:p-8">
-                  {index !== 1 && (
-                    <>
-                      <h3 className="text-xl sm:text-2xl text-[#232323] [font-family:'Figtree',Helvetica] leading-6 sm:leading-7">
-                        {card.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-[#232323] [font-family:'Inter',Helvetica] leading-5 sm:leading-[22px]">
-                        {card.description}
-                      </p>
-                    </>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-4 sm:mt-6">
-            {whyStxNextCards.slice(3).map((card, index) => (
-              <Card
-                key={index}
-                className={
-                  index === 0
-                    ? "bg-[url(/team1.jpg)] bg-cover h-[300px] sm:h-[428px]"
-                    : "bg-[#f4f4f4] h-[300px] sm:h-[428px]"
-                }
-              >
-                <CardContent className="flex flex-col justify-between h-full p-4 sm:p-8">
-                  {index !== 0 && (
-                    <>
-                      <h3 className="text-xl sm:text-2xl text-[#232323] [font-family:'Figtree',Helvetica] leading-6 sm:leading-7">
-                        {card.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-[#232323] [font-family:'Inter',Helvetica] leading-5 sm:leading-[22px]">
-                        {card.description}
-                      </p>
-                    </>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+       
 
         <section className="relative bg-white rounded-[20px] p-4 sm:p-8 mt-12 sm:mt-20">
           <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
@@ -424,92 +363,20 @@ export const BackgroundWrapperByAnima = (): JSX.Element => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <Card className="bg-[#f2f2f2] border-[#d1d1d1] rounded-3xl h-full">
-                <CardContent className="p-0">
-                  <Accordion type="single" collapsible className="w-full">
-                    {webAppServices.map((service, index) => (
-                      <AccordionItem
-                        key={index}
-                        value={`item-${index}`}
-                        className="border-b border-[#d1d1d1]"
-                      >
-                        <AccordionTrigger className="px-4 sm:px-7 py-4 sm:py-8 text-[#232323] text-lg sm:text-xl md:text-2xl [font-family:'Inter',Helvetica] leading-6 sm:leading-7 md:leading-[34px] hover:no-underline">
-                          {service}
-                        </AccordionTrigger>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
+            <Card className="bg-[#f2f2f2] border-[#d1d1d1] rounded-3xl h-full">
+              <CardContent className="p-0">
+                {webAppServices.map((service, index) => (
+                  <p key={index} className="px-4 sm:px-7 py-4 sm:py-8 text-[#232323] text-lg sm:text-xl md:text-2xl [font-family:'Inter',Helvetica] leading-6 sm:leading-7 md:leading-[34px]">
+                    {service}
+                  </p>
+                ))}
+              </CardContent>
+            </Card>
             </div>
           </div>
         </section>
 
-        <section className="bg-white p-4 sm:p-8 mt-12 sm:mt-20 rounded-[20px]">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#232323] [font-family:'Figtree',Helvetica] leading-tight sm:leading-[76px] mb-8 sm:mb-12">
-            Don't just take our
-            <br className="hidden sm:block" />
-            word for it:
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {reviews.map((review, index) => (
-              <Card key={index} className="bg-[#f4f4f4] rounded-3xl">
-                <CardContent className="p-4 sm:p-8">
-                  <div className="flex items-center mb-4">
-                    <span className="text-[#232323] text-sm sm:text-base font-medium [font-family:'Inter',Helvetica] leading-5 sm:leading-[22px] mr-4">
-                      {review.rating}
-                    </span>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <img
-                          key={i}
-                          className="w-3 h-3 sm:w-4 sm:h-4"
-                          alt="Star"
-                          src="/component-1.svg"
-                        />
-                      ))}
-                    </div>
-                    <div className="ml-auto">
-                      <img
-                        className="w-8 h-8 sm:w-10 sm:h-10"
-                        alt="Quote"
-                        src="/component-1-76.svg"
-                      />
-                    </div>
-                  </div>
-
-                  <p className="text-sm sm:text-base text-[#333333] [font-family:'Inter',Helvetica] leading-5 sm:leading-[25.6px] mb-4 sm:mb-6">
-                    {review.text}
-                  </p>
-
-                  <Card className="bg-white rounded-2xl">
-                    <CardContent className="p-3 sm:p-4 flex items-center">
-                      <div>
-                        <p className="text-sm sm:text-base text-[#232323] [font-family:'Inter',Helvetica] leading-5 sm:leading-7">
-                          {review.position}
-                        </p>
-                        <p className="text-[10px] sm:text-xs text-[#757575] [font-family:'Inter',Helvetica] tracking-[1px] leading-3 sm:leading-[16.8px]">
-                          {review.company}
-                        </p>
-                      </div>
-                      <div className="ml-auto">
-                        <img
-                          className="w-[50px] sm:w-[70px] h-4 sm:h-5 mb-1 sm:mb-2"
-                          alt="Clutch logo"
-                          src="/clutch-logo.png"
-                        />
-                        <p className="text-[10px] sm:text-xs text-[#757575] [font-family:'Inter',Helvetica] leading-4 sm:leading-[16.8px]">
-                          {review.verifiedDate}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        
       </div>
     </div>
   );

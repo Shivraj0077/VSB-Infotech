@@ -14,9 +14,10 @@ export const DivByAnima = (): JSX.Element => {
             <br className="hidden sm:block" />
             Our team is ready to turn your vision into reality.
           </p>
-          <Button className="bg-[#232323] text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-none hover:bg-[#232323]/90">
-            Get in touch
-          </Button>
+        <Button className="bg-[#00b2a9] text-[#232323] px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-md hover:bg-[#00b2a8]/90"
+        onClick={() => window.location.href = '/contact'}>
+          Get in touch
+        </Button>
         </div>
       </div>
     </section>

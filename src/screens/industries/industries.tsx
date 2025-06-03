@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 interface Feature {
   title: string;
   description: string;
-  icon: string;
+  
 }
 
 interface Industry {
@@ -36,9 +36,9 @@ const Industries: React.FC = () => {
       title: "Education",
       description: "Transforming learning with tailored LMS solutions.",
       features: [
-        { title: "Online Classrooms", description: "Streamlined course delivery and student tracking.", icon: "component-1-47.svg" },
-        { title: "Personalized Learning", description: "AI-driven recommendations for students.", icon: "component-1-57.svg" },
-        { title: "Scalable Systems", description: "Support for thousands of learners.", icon: "component-1-52.svg" },
+        { title: "Online Classrooms", description: "Streamlined course delivery and student tracking." },
+        { title: "Personalized Learning", description: "AI-driven recommendations for students." },
+        { title: "Scalable Systems", description: "Support for thousands of learners."  },
       ],
     },
     {
@@ -47,9 +47,9 @@ const Industries: React.FC = () => {
       title: "Corporate Training",
       description: "Empowering teams with efficient training programs.",
       features: [
-        { title: "Upskilling Programs", description: "Custom LMS for employee development.", icon: "component-1-47.svg" },
-        { title: "Onboarding", description: "Streamlined training for new hires.", icon: "component-1-57.svg" },
-        { title: "Performance Tracking", description: "Monitor progress with real-time analytics.", icon: "component-1-52.svg" },
+        { title: "Upskilling Programs", description: "Custom LMS for employee development.", },
+        { title: "Onboarding", description: "Streamlined training for new hires.", },
+        { title: "Performance Tracking", description: "Monitor progress with real-time analytics.",  },
       ],
     },
     {
@@ -57,10 +57,10 @@ const Industries: React.FC = () => {
       isActive: false,
       title: "Healthcare",
       description: "Enhancing compliance and medical education.",
-      features: [
-        { title: "Compliance Training", description: "Ensure adherence to regulations.", icon: "component-1-47.svg" },
-        { title: "Certifications", description: "Track and issue medical certifications.", icon: "component-1-57.svg" },
-        { title: "Continued Education", description: "Support ongoing learning for professionals.", icon: "component-1-52.svg" },
+      features:[ 
+        { title: "Compliance Training", description: "Ensure adherence to regulations.", },
+        { title: "Certifications", description: "Track and issue medical certifications.", },
+        { title: "Continued Education", description: "Support ongoing learning for professionals.", },
       ],
     },
     {
@@ -69,9 +69,9 @@ const Industries: React.FC = () => {
       title: "Retail & Sales",
       description: "Boosting sales with training and networking tools.",
       features: [
-        { title: "Product Training", description: "Equip teams with product knowledge via LMS.", icon: "component-1-47.svg" },
-        { title: "Digital Networking", description: "Contactless Digital Visiting Cards for sales teams.", icon: "component-1-57.svg" },
-        { title: "Lead Generation", description: "Track engagement with analytics.", icon: "component-1-52.svg" },
+        { title: "Product Training", description: "Equip teams with product knowledge via LMS.",  },
+        { title: "Digital Networking", description: "Contactless Digital Visiting Cards for sales teams.",  },
+        { title: "Lead Generation", description: "Track engagement with analytics.",  },
       ],
     },
     {
@@ -80,9 +80,9 @@ const Industries: React.FC = () => {
       title: "Nonprofits & Government",
       description: "Supporting community programs with accessible solutions.",
       features: [
-        { title: "Skill Development", description: "LMS for training initiatives.", icon: "component-1-47.svg" },
-        { title: "Awareness Programs", description: "Engage communities with eLearning.", icon: "component-1-57.svg" },
-        { title: "Cost-Effective Tools", description: "Digital Visiting Cards for outreach.", icon: "component-1-52.svg" },
+        { title: "Skill Development", description: "LMS for training initiatives.",  },
+        { title: "Awareness Programs", description: "Engage communities with eLearning.",  },
+        { title: "Cost-Effective Tools", description: "Digital Visiting Cards for outreach.",  },
       ],
     },
   ];
@@ -199,7 +199,7 @@ const Industries: React.FC = () => {
                   {activeIndustry.title}
                 </h3>
                 <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center">
-                  <img className="w-2 h-2 sm:w-2.5 sm:h-2.5" alt="Component" src="/component-1-71.svg" />
+                  <img className="w-2 h-2 sm:w-2.5 sm:h-2.5"  src="/component-1-71.svg" />
                 </div>
               </div>
               <p className="text-white text-base sm:text-xl font-['Inter',Helvetica] leading-6 mb-6 sm:mb-8">
@@ -209,7 +209,7 @@ const Industries: React.FC = () => {
                 {activeIndustry.features.map((feature, index) => (
                   <div key={index} className="mb-6">
                     <div className="flex items-start mb-2">
-                      <img className="w-6 h-6 sm:w-8 sm:h-8 mr-3 sm:mr-4" alt="Component" src={feature.icon} />
+                      
                       <h4 className="text-white text-base sm:text-xl font-medium font-['Inter',Helvetica] leading-6 sm:leading-7">
                         {feature.title}
                       </h4>
